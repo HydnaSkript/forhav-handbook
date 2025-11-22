@@ -1,0 +1,159 @@
+backend:
+  name: git-gateway
+  branch: main
+
+site_url: https://handbook.forhav.no
+display_url: https://handbook.forhav.no
+logo_url: https://handbook.forhav.no/assets/media/forhav-logo.png
+
+publish_mode: editorial_workflow
+media_folder: "docs/assets/media"
+public_folder: "/assets/media"
+
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "-"
+
+collections:
+  - name: index
+    label: "00 INDEX"
+    folder: "docs/00-INDEX"
+    create: false
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Owner", name: "owner", widget: "string", default: "Fag/Marked"}
+      - {label: "Updated", name: "updated", widget: "datetime", format: "YYYY-MM-DD"}
+      - {label: "Tags", name: "tags", widget: "list", default: ["handbook","index"]}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: strategi
+    label: "01 Strategi/Marked"
+    folder: "docs/01-Strategi-Marked"
+    create: true
+    extension: "md"
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Owner", name: "owner", widget: "string", default: "Fag/Marked"}
+      - {label: "Updated", name: "updated", widget: "datetime", format: "YYYY-MM-DD"}
+      - {label: "Tags", name: "tags", widget: "list", default: ["strategi"]}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: esrs
+    label: "02 Regulatoriske/ESRS"
+    folder: "docs/02-Regulatoriske-ESRS"
+    create: true
+    extension: "md"
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Owner", name: "owner", widget: "string", default: "Fag/Marked"}
+      - {label: "Updated", name: "updated", widget: "datetime", format: "YYYY-MM-DD"}
+      - {label: "Tags", name: "tags", widget: "list", default: ["esrs"]}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: metode
+    label: "03 Metode/Data/QAQC"
+    folder: "docs/03-Metode-Data-QAQC"
+    create: true
+    extension: "md"
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Owner", name: "owner", widget: "string", default: "Fag/Marked"}
+      - {label: "Updated", name: "updated", widget: "datetime", format: "YYYY-MM-DD"}
+      - {label: "Tags", name: "tags", widget: "list", default: ["metode","qaqc"]}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: kpi
+    label: "04 Produktstakk/KPI"
+    folder: "docs/04-Produktstakk-KPI"
+    create: true
+    extension: "md"
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Owner", name: "owner", widget: "string", default: "Fag/Marked"}
+      - {label: "Updated", name: "updated", widget: "datetime", format: "YYYY-MM-DD"}
+      - {label: "Tags", name: "tags", widget: "list", default: ["kpi","produktstakk"]}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: salg
+    label: "05 Salg/Posisjonering"
+    folder: "docs/05-Salg-Posisjonering"
+    create: true
+    extension: "md"
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Owner", name: "owner", widget: "string", default: "Fag/Marked"}
+      - {label: "Updated", name: "updated", widget: "datetime", format: "YYYY-MM-DD"}
+      - {label: "Tags", name: "tags", widget: "list", default: ["salg","posisjonering"]}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: compliance
+    label: "06 Compliance/Claims"
+    folder: "docs/06-Compliance-Claims"
+    create: true
+    extension: "md"
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Owner", name: "owner", widget: "string", default: "Fag/Marked"}
+      - {label: "Updated", name: "updated", widget: "datetime", format: "YYYY-MM-DD"}
+      - {label: "Tags", name: "tags", widget: "list", default: ["compliance","claims"]}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: dashboard
+    label: "07 Dashboard/Maler"
+    folder: "docs/07-Dashboard-Maler"
+    create: true
+    extension: "md"
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Owner", name: "owner", widget: "string", default: "Fag/Marked"}
+      - {label: "Updated", name: "updated", widget: "datetime", format: "YYYY-MM-DD"}
+      - {label: "Tags", name: "tags", widget: "list", default: ["dashboard","maler"]}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: partnerskap
+    label: "12 Partnerskap"
+    folder: "docs/12-Partnerskap"
+    create: true
+    extension: "md"
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Owner", name: "owner", widget: "string", default: "Fag/Marked"}
+      - {label: "Updated", name: "updated", widget: "datetime", format: "YYYY-MM-DD"}
+      - {label: "Tags", name: "tags", widget: "list", default: ["partnerskap"]}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: ordliste
+    label: "14 Ordliste"
+    folder: "docs/14-Ordliste"
+    create: true
+    extension: "md"
+    slug: "{{slug}}"
+    fields:
+      - {label: "Oppslagsord", name: "title", widget: "string"}
+      - {label: "Owner", name: "owner", widget: "string", default: "Fag/Marked"}
+      - {label: "Updated", name: "updated", widget: "datetime", format: "YYYY-MM-DD"}
+      - {label: "Tags", name: "tags", widget: "list", default: ["ordliste"]}
+      - {label: "Definisjon", name: "body", widget: "markdown"}
+
+  - name: playbooks
+    label: "19 Case/Playbooks"
+    folder: "docs/19-Case-Playbooks"
+    create: true
+    extension: "md"
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Owner", name: "owner", widget: "string", default: "Fag/Marked"}
+      - {label: "Updated", name: "updated", widget: "datetime", format: "YYYY-MM-DD"}
+      - {label: "Tags", name: "tags", widget: "list", default: ["playbook","case"]}
+      - {label: "Body", name: "body", widget: "markdown"}

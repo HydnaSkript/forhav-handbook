@@ -1,0 +1,88 @@
+site_name: ForHav Håndbok
+site_url: https://handbook.forhav.no
+site_description: Intern håndbok for ForHav marine restaurering
+docs_dir: docs
+
+theme:
+  name: material
+  language: nb
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: cyan
+      toggle:
+        icon: material/brightness-7
+        name: Bytt til mørk modus
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: cyan
+      toggle:
+        icon: material/brightness-4
+        name: Bytt til lys modus
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+      toc_depth: 3
+
+plugins:
+  - search:
+      lang: nb
+
+nav:
+  - Hjem: index.md
+  - 00 INDEX:
+    - 00-INDEX/INDEX.md
+  - 01 Strategi/Marked:
+    - 01-Strategi-Marked/index.md
+  - 02 Regulatoriske/ESRS:
+    - 02-Regulatoriske-ESRS/index.md
+  - 03 Metode/Data/QAQC:
+    - 03-Metode-Data-QAQC/index.md
+  - 04 Produktstakk/KPI:
+    - 04-Produktstakk-KPI/index.md
+  - 05 Salg/Posisjonering:
+    - 05-Salg-Posisjonering/index.md
+  - 06 Compliance/Claims:
+    - 06-Compliance-Claims/index.md
+  - 07 Dashboard/Maler:
+    - 07-Dashboard-Maler/index.md
+  - 12 Partnerskap:
+    - 12-Partnerskap/index.md
+  - 14 Ordliste:
+    - 14-Ordliste/index.md
+  - 19 Case/Playbooks:
+    - 19-Case-Playbooks/index.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/forhav
+    - icon: fontawesome/solid/envelope
+      link: mailto:hei@forhav.no

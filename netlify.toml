@@ -1,0 +1,25 @@
+[build]
+  command = "mkdocs build"
+  publish = "site"
+
+# Redirect /admin/* to admin interface
+[[redirects]]
+  from = "/admin/*"
+  to = "/admin/index.html"
+  status = 200
+
+# Headers for better security
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Branch deploys (for preview)
+[context.branch-deploy]
+  command = "mkdocs build"
+
+# Deploy preview context
+[context.deploy-preview]
+  command = "mkdocs build"
