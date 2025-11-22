@@ -1,5 +1,5 @@
 [build]
-  command = "pip install -r requirements.txt && mkdocs build"
+  command = "pip install -r requirements.txt && python -m mkdocs build"
   publish = "site"
 
 # Redirect /admin/* to admin interface
@@ -18,8 +18,8 @@
 
 # Branch deploys (for preview)
 [context.branch-deploy]
-  command = "mkdocs build"
+  command = "pip install -r requirements.txt && python -m mkdocs build"
 
 # Deploy preview context
 [context.deploy-preview]
-  command = "mkdocs build"
+  command = "pip install -r requirements.txt && python -m mkdocs build"
